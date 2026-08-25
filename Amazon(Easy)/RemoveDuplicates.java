@@ -40,17 +40,14 @@ public class RemoveDuplicates {
      */
     public static void main(String[] args) {
         int[] nums = {0, 1, 1, 1, 2, 2, 3, 5, 5, 5, 6};
-
-        int i = nums[0];
+     
         int k = 0;
-        for(int j = 1; j < nums.length;j++) {
-            if(nums[i] != nums[j]) {
-                i++;
-                nums[i] = nums[j];
-                k = i + 1;
+        for(int i = 1; i < nums.length;i++) {
+            if(nums[k] != nums[i]) {
+                nums[++k] = nums[i];
             }
         }
-        System.out.println(k);
+        System.out.println(k+1);
     }
 }
 
